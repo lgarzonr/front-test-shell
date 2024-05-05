@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { mount } from "AppHeader/bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const HeaderApp = () => {
+  const navigate = useNavigate();
   const ref = useRef(null);
+
   useEffect(() => {
-    console.log("HeaderApp mounted", mount);
-    mount(ref.current);
-    return () => {
-      console.log("HeaderApp unmounted");
-    };
-  });
+    mount(ref.current, navigate);
+  }, []);
 
   return <div ref={ref} />;
 };
