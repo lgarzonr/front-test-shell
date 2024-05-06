@@ -7,6 +7,8 @@ jest.mock("react-dom/client", () => ({
 
 const HeaderApp = jest.fn(() => <div></div>);
 jest.mock("./remoteApps/header/HeaderApp", () => HeaderApp);
+jest.mock("./remoteApps/results/ResultsApp", () => () => <div></div>);
+jest.mock("./remoteApps/detail/DetailApp", () => () => <div></div>);
 
 jest
   .spyOn(document, "getElementById")

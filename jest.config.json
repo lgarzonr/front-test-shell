@@ -14,5 +14,8 @@
       "functions": 100,
       "lines": 100
     }
+  },
+  "moduleNameMapper": {
+    "^.+\\.(css|less|scss)$": "babel-jest"
   }
 }

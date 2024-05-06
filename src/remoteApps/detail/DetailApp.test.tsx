@@ -1,17 +1,17 @@
 import React from "react";
-import { render, waitFor } from "@testing-library/react";
-import HeaderApp from "./HeaderApp";
+import { render } from "@testing-library/react";
+import DetailApp from "./DetailApp";
 import { BrowserRouter } from "react-router-dom";
 
-jest.mock("AppHeader/bootstrap", () => ({ mount: jest.fn() }), {
+jest.mock("AppDetail/bootstrap", () => ({ mount: jest.fn() }), {
   virtual: true,
 });
 
-describe("HeaderApp", () => {
+describe("DetailApp", () => {
   it("Should render container", async () => {
     const view = render(
       <BrowserRouter>
-        <HeaderApp />
+        <DetailApp />
       </BrowserRouter>
     );
     expect(view).toBeTruthy();
